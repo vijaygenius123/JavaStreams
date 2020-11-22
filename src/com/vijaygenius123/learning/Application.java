@@ -2,6 +2,8 @@ package com.vijaygenius123.learning;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Application {
 
@@ -38,18 +40,15 @@ public class Application {
         System.out.println("All Employees");
         System.out.println(employees);
 
-        List<Employee> filteredEmployeesFor = new ArrayList<>();
 
 
-        for (Employee employee : employees) {
-            if(employee.getDepartment() == Department.ENGINEERING){
-                filteredEmployeesFor.add(employee);
-            }
-        }
+        System.out.println("MARKETING Employees");
+        employees.stream()
+                .filter(employee -> employee.getDepartment().equals(Department.MARKETING))
+                .forEach(System.out::println);
 
-        System.out.println("Engineering Employees");
-        System.out.println(filteredEmployeesFor);
-
+        //System.out.println("Sales Employees");
+        //System.out.println(filteredEmployeesStream);
 
     }
 }
