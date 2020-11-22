@@ -12,6 +12,17 @@ public class Employee {
     private List<Asset> assets;
 
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", department=" + department +
+                ", assets=" + assets +
+                '}';
+    }
+
     public int getId() {
         return id;
     }

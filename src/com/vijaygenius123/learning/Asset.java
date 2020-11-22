@@ -10,6 +10,14 @@ public class Asset {
         this.type = type;
     }
 
+    @Override
+    public String toString() {
+        return "Asset{" +
+                "name='" + name + '\'' +
+                ", type=" + type +
+                '}';
+    }
+
     public String getName() {
         return name;
     }
