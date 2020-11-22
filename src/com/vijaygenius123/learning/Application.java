@@ -38,9 +38,17 @@ public class Application {
         System.out.println("All Employees");
         System.out.println(employees);
 
+        List<Employee> filteredEmployeesFor = new ArrayList<>();
 
 
+        for (Employee employee : employees) {
+            if(employee.getDepartment() == Department.ENGINEERING){
+                filteredEmployeesFor.add(employee);
+            }
+        }
 
+        System.out.println("Engineering Employees");
+        System.out.println(filteredEmployeesFor);
 
 
     }
